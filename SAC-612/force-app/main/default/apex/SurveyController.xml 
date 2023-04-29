@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexClass xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>47.0</apiVersion>
+    <status>Active</status>
+    <description>Admin survey story Apex class</description>
+    <packageVersions>
+        <majorNumber>47</majorNumber>
+        <minorNumber>0</minorNumber>
+    </packageVersions>
+    <isExposed>true</isExposed>
+    <enableFeeds>false</enableFeeds>
+    <sharingModel>ReadWrite</sharingModel>
+    <label>Admin Survey Story</label>
+    <code>
+public class AdminSurveyStory {
+    public String domain {get; set;}
+    public String title {get; set;}
+    public String description {get; set;}
+    public Integer delayTime {get; set;}
+    public String status {get; set;}
+    public String surveyState {get; set;}
+    public String pageName {get; set;}
+    public Date startDate {get; set;}
+    public Date endDate {get; set;}
+    public String targetUsers {get; set;}
+    public String criteria {get; set;}
+    public String specialty {get; set;}
+    public String preferences {get; set;}
+    public String country {get; set;}
+    public String region {get; set;}
+    public String city {get; set;}
+    public List<String> userList {get; set;}
+    public List<Question> questions {get; set;}
+    public List<UserResponse> userResponse {get; set;}
+    
+    public static class Question {
+        public String title {get; set;}
+        public String answerType {get; set;}
+        public Integer ratingRange {get; set;}
+    }
+    
+    public static class UserResponse {
+        public String name {get; set;}
+        public String email {get; set;}
+        public String phone {get; set;}
+        public String specialty {get; set;}
+        public String ipAddress {get; set;}
+    }
+    
+    public AdminSurveyStory() {
+        this.domain = 'India';
+        this.status = 'Active';
+        this.surveyState = 'Not Started';
+        this.targetUsers = 'All Users';
+        this.questions = new List<Question>();
+        this.userResponse = new List<UserResponse>();
+    }
+    
+    public void createSurvey() {
+        // Logic for creating a survey
+    }
+    
+    public void updateSurvey() {
+        // Logic for updating a survey
+    }
+    
+    public void cancelSurvey() {
+        // Logic for cancelling a survey
+    }
+    
+    public void deleteSurvey() {
+        // Logic for deleting a survey
+    }
+    
+    public void viewReport() {
+        // Logic for viewing report
+    }
+    
+    public void getUserResponse() {
+        // Logic for getting user response
+    }
+}
+</code>
+</ApexClass>
